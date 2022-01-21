@@ -3,7 +3,7 @@ import requests
 
 
 app = Flask(__name__)
-api_endpoint = "http://172.17.0.2:5000/ns_movies/"
+api_endpoint = "http://flask-rest.default.svc.cluster.local:5000/ns_movies/"
 
 @app.route("/", methods=['GET'])
 def render_home_page():
