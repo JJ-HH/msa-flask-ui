@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="row2" style="margin-top: 25px;">
+  <div class="column2">
+    <img src="{{movie.get('poster')}}" style="width: 100%;" />
+  </div>  
+  <div class="column2">
+    <h3>Title: {{movie.get('title')}}</h3>
+    <h3>Release: {{movie.get('year')}}</h3>
+    <h3>Cast: {{", ".join(movie.get('cast'))}}</h3>
+    <h3>description: {{movie.get('description')}}</h3>
+    <button class="back" onclick="window.location.replace(window.location.href.slice(0, window.location.href.search('detail')))">back</button>
+  </div>
+</div>
+{% endblock %}

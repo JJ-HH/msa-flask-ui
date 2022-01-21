@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block content %}
+  <div class="cards">
+    {% for k, v in movies.items() %}
+    <a href="{{ url_for('render_detail_page', movie_id=k) }}">
+    <div class="column">
+      <div class="content">
+        <img src="{{v.get('poster')}}" alt="poster" style="width:100%; height: 95%;">
+        <h4>{{k}}</h4>
+      </div>
+    </div>
+    </a>
+    {% endfor %}
+  </div>
+{% endblock %}

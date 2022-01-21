@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset='utf-8'>
+  <title>Movie Client Page by 강지호</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+  <!-- <script src="/static/script.js"></script> -->
+  
+</head>
+
+<body>
+  
+  <header>
+    <div class="c2">
+      <marquee><strong><p>Welcome To Movie Info Page</strong></p></marquee>
+    </div>
+    <div class="nav">
+      <hr/>
+      <nav>
+      <ul>
+        <li><a href="{{url_for('render_home_page')}}">Home</a></li>
+      </ul>
+      </nav>
+      <hr/>
+    </div>
+  </header>
+
+  {% block content %}{% endblock %}
+  <!-- <footer>
+    <div>
+   Created by DevelopeSpot 
+    </div>
+  </footer> -->
+</body>
+</html>
